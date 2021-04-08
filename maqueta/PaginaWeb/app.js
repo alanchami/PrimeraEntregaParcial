@@ -28,7 +28,7 @@ app.use('/users', usersRouter);
 app.use ('/register', registerRouter);
 app.use('/login', loginRouter);
 app.use('/miperfil', miperfilRouter);
-app.use ('agregarproducto', agregarproductoRouter)
+app.use ('/agregarproducto', agregarproductoRouter)
 
 
 // catch 404 and forward to error handler
