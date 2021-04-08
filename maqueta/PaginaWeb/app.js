@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var registerRouter = require('./routes/register')
 var loginRouter = require('./routes/login.js');
 var miperfilRouter = require('./routes/miperfil');
-var agregarproductoRouter = require('./routes/agregarproducto')
+var agregarproductoRouter = require('./routes/agregarproducto');
 
 var app = express();
 
