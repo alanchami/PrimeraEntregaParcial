@@ -28,7 +28,7 @@ app.use ('/product', productRouter)
 app.use('/users', usersRouter);
 app.use ('/register', registerRouter);
 app.use('/login', loginRouter);
-//app.use('/miperfil', miperfilRouter);
+app.use('/miperfil', miperfilRouter);
 
 
 
