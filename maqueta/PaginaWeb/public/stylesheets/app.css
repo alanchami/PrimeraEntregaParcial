@@ -68,7 +68,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: var(--light-gray);
 }
 
 .main-header_home-link,
@@ -528,7 +528,7 @@ textarea.form-input {
     margin: auto;
   }
   .name1{
-font-family:Georgia, 'Times New Roman', Times, serif;
+font-family:monospace;
 padding-left: 19px;
   }
 
@@ -902,6 +902,7 @@ padding-left: 19px;
     .user_options-unregistered {
       padding: 50px 45px;
     }
+    
   }
   
   
