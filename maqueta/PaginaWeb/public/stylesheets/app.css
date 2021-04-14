@@ -536,7 +536,7 @@ padding-left: 19px;
     background: url("../images/16624.jpg") no-repeat center;
   }
   button {
-    background-color: transparent;
+    background-color:transparent;
     padding: 0;
     border: 0;
     outline: 0;
@@ -727,7 +727,7 @@ padding-left: 19px;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 10px 30px;
-    color: #fff;
+    color: black;
     text-transform: uppercase;
     line-height: 1em;
     letter-spacing: 0.2rem;
@@ -839,6 +839,7 @@ padding-left: 19px;
     transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.5s ease-in-out;
     transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out;
     transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    
   }
   .user_options-forms .user_forms-signup {
     -webkit-transform: translate3d(120px, 0, 0);
