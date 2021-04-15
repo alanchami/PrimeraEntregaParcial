@@ -70,7 +70,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: var(--light-gray);
 }
 
 .main-header_home-link,
