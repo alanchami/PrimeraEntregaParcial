@@ -69,11 +69,14 @@ hr {
 .main-header {
   padding: 15px 0;
   background-color: whitesmoke;
+  text-decoration: none;
 }
 
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
+  text-decoration: none;
+
 }
 
 .main-header_credit-link {
@@ -147,7 +150,7 @@ hr {
 .left-navbar a,
 .right-navbar a {
   display: block;
-  padding: 5px 0;
+  padding: 0px 0;
   border-bottom: solid 1px var(--gray);
 }
 
@@ -169,7 +172,53 @@ hr {
   margin-bottom: 30px;
 }
 
+
+
+.h--1{
+  transition: width 2s, height 2s, transform 2s;
+  -moz-transition: width 2s, height 2s, -moz-transform 2s;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  -o-transition: width 2s, height 2s,-o-transform 2s;
+}
+.h--2{
+  transition: width 2s, height 2s, transform 2s;
+  -moz-transition: width 2s, height 2s, -moz-transform 2s;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  -o-transition: width 2s, height 2s,-o-transform 2s;
+}
+.h--3{
+  transition: width 2s, height 2s, transform 2s;
+  -moz-transition: width 2s, height 2s, -moz-transform 2s;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  -o-transition: width 2s, height 2s,-o-transform 2s;
+}
+
+.h--1:hover{
+  /* tranformamos el elemento al pasar el mouse por encima al doble de
+     su tamaño con scale(2). */
+  transform : scale(0.7);
+  -moz-transform : scale(0.7);      /* Firefox */
+  -webkit-transform : scale(0.7);   /* Chrome - Safari */
+  -o-transform : scale(0.7);    
+    }    /* Opera */
+    .h--2:hover{
+      /* tranformamos el elemento al pasar el mouse por encima al doble de
+         su tamaño con scale(2). */
+      transform : scale(0.7);
+      -moz-transform : scale(0.7);      /* Firefox */
+      -webkit-transform : scale(0.7);   /* Chrome - Safari */
+      -o-transform : scale(0.7);        /* Opera */
+  }
+  .h--3:hover{
+    /* tranformamos el elemento al pasar el mouse por encima al doble de
+       su tamaño con scale(2). */
+    transform : scale(0.7);
+    -moz-transform : scale(0.7);      /* Firefox */
+    -webkit-transform : scale(0.7);   /* Chrome - Safari */
+    -o-transform : scale(0.7);        /* Opera */
+}
 .products-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2.4em;
   font-weight: 400;
   color: var(--gray);
