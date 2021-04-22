@@ -275,12 +275,10 @@ animation-delay: -5s;
 
 
 .products-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.4em;
   font-weight: 400;
   text-align: center;
-  background-color: blanchedalmond;
-
   color: var(--gray);
 }
 
