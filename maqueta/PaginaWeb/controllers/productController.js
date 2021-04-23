@@ -1,4 +1,3 @@
-let relojes = require('../public/javascripts/lista')
 const productController = {
     show: function (req, res) { 
        
