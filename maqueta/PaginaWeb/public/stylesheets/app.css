@@ -275,7 +275,7 @@ animation-delay: -5s;
 
 
 .products-title {
-  font-family: 'Arvo', serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 4.8em;
   font-weight: 400;
   text-align: center;
@@ -833,7 +833,7 @@ padding-left: 19px;
   
   .user_registered-login,
   .user_unregistered-signup {
-    margin-top: 30px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 10px 30px;
@@ -848,6 +848,7 @@ padding-left: 19px;
   .user_unregistered-signup:hover {
     color: rgba(34, 34, 34, 0.85);
     background-color: #ccc;
+ 
   }
   
   /**
@@ -876,7 +877,8 @@ padding-left: 19px;
   }
   .user_options-forms .forms_title {
     margin-bottom: 45px;
-    font-size: 1.5rem;
+   
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 1em;
     text-transform: uppercase;

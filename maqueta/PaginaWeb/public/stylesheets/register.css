@@ -159,12 +159,14 @@ hr {
   color: var(--gray);
   font-size: 2.4em;
   font-weight: 400;
+  
 }
 
 .footer-data p {
   color: var(--gray);
   font-size: 1.5em;
   font-weight: 300;
+  
 }
 
 .sub-footer {
@@ -251,7 +253,7 @@ img{
     height: 25%;
 }
 .form-title{
-  font-family: 'Arvo', serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 3.8em;
   text-align: center;
     color: grey;
@@ -278,6 +280,7 @@ input[type=password]{
   outline:none;
   margin: 8px 0;
   padding:5px 0;
+  width: 100%;
 }
 input[type=datetime-local]{
 
@@ -311,12 +314,12 @@ select{
 }
 .button1{
   font-family: 'Arvo', serif;
-  font-size: 3.8em;
+  font-size: 3.4em;
   text-align: center;
     color: grey;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height:100px;
-    width:100%;
+    width:20%;
     cursor: pointer;
     border:none;
     border-radius:2%;
@@ -330,7 +333,8 @@ select{
 .button1:hover{
   width: 100%;
   color: aliceblue;
-    background-color:black;
+  background-color:grey;
+  text-align: center;
 }
 
 }

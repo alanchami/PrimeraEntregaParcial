@@ -1,5 +1,6 @@
 const productController = {
     show: function (req, res) { 
+       
         return res.render ('product', { title: 'Proyecto Integrador 2021'})
     },
 
