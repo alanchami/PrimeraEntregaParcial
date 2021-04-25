@@ -260,11 +260,12 @@ img{
 .form-register{
     padding:0px 20px;
     color: black;
+
 }
 
 .input1[type=text], [type=email]{
     border: none;
-    border: 1px solid black;
+    border : 1px solid black;
     outline:none;
     width:100%;
     margin: 8px 0;
@@ -328,7 +329,8 @@ select{
 }
 .button1:hover{
   width: 100%;
-  color:red;
+  color: aliceblue;
+    background-color:black;
 }
 
 }
