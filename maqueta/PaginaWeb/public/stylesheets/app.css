@@ -861,9 +861,9 @@ padding-left: 19px;
    */
   .user_options-forms {
     position: absolute;
-    top: 50%;
+    top:30%;
     left: 30px;
-    width: calc(50% - 30px);
+    width: calc(50% - 40px);
     min-height: 620px;
     background-color: #fff;
     border-radius: 3px;

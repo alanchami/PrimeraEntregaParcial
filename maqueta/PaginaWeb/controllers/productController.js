@@ -7,6 +7,7 @@ const productController = {
     add: function (req, res) { 
         return res.render ('product-add', { title: 'Proyecto Integrador 2021'})
     }
+
 }
 
 module.exports = productController
