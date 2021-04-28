@@ -383,7 +383,13 @@ animation-delay: -5s;
   color:#FFC176;
   font-size: 3.5em;
 }
-
+.h-1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3.8em;
+  padding-left: 450px;
+  text-align: center;
+    color: grey;
+}
 .footer-data h2 {
   color: var(--gray);
   font-size: 2.4em;
