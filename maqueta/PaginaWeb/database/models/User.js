@@ -33,8 +33,8 @@ let cols={
 }
 let config = {
     table: 'usuarios',
-    timestamps: false,
-    underscored: true,
+    timestamps: true,
+    underscored: false,
 
 
 }
