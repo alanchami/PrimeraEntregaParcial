@@ -310,7 +310,6 @@ hr {
   border-radius: 8px;
   overflow: hidden;
 }
-
 .product-detail-img {
   width: 70%;
   display: block;
@@ -376,7 +375,7 @@ hr {
 }
 
 .buy-now-button {
-  background-color: var(--light-blue);
+  background-color:#ffd39d;
   font-size: 1.6em;
   color: #ffffff;
   padding: 15px;
