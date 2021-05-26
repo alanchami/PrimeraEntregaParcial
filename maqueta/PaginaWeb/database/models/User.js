@@ -20,7 +20,7 @@ let cols={
     password:{
         type:dataTypes.STRING,
     },
-    CreatedAT:{
+    createdAT:{
         type:dataTypes.DATE,
     },
    updatedAT:{
