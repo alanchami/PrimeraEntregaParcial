@@ -8,10 +8,10 @@ let cols={
         primaryKey:true,
         type:dataTypes.INTEGER,
     },
-    productosId: { 
+    productos_id: { 
         type: dataTypes.INTEGER
     }, 
-    usuariosId:{
+    usuarios_id:{
         type:dataTypes.INTEGER,
     },
     name: { 
@@ -20,24 +20,24 @@ let cols={
     description:{
         type:dataTypes.STRING,
     },
-    createdAt:{
+    created_at:{
         type:dataTypes.DATE,
-        field: "createdAT"
+        
     },
-   updatedAt:{
+   updated_at:{
         type:dataTypes.DATE,
-        field: "updatedAT"
+        
     },
-    deletedAt:{
+    deleted_at:{
         type:dataTypes.DATE,
-        field: "deletedAT"
+       
     },
     
 }
 let config = {
     tableName: 'comentarios',
     timestamps: true,
-    underscored: false,
+    underscored: true,
 
 
 }

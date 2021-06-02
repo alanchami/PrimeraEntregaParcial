@@ -23,24 +23,24 @@ let cols={
     telefono: { 
         type: dataTypes.INTEGER, 
     }, 
-    createdAt:{
+    created_at:{
         type:dataTypes.DATE,
-        field: "createdAT"
+        
     },
-   updatedAt:{
+   updated_at:{
         type:dataTypes.DATE,
-        field: "updatedAT"
+        
     },
-    deletedAt:{
+    deleted_at:{
         type:dataTypes.DATE,
-        field: "deletedAT"
+        
     },
     
 }
 let config = {
     tableName: 'usuarios',
     timestamps: true,
-    underscored: false,
+    underscored: true,
 
 
 }

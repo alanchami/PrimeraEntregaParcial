@@ -16,27 +16,27 @@ let cols={
     descripcion:{
         type:dataTypes.STRING,
     },
-    usuariosId:{
+    usuarios_id:{
         type:dataTypes.INTEGER,
     },
-    createdAt:{
+    created_at:{
         type:dataTypes.DATE,
-        field: "createdAT"
+        
     },
-   updatedAt:{
+   updated_at:{
         type:dataTypes.DATE,
-        field: "updatedAT"
+        
     },
-    deletedAt:{
+    deleted_at:{
         type:dataTypes.DATE,
-        field: "deletedAT"
+        
     },
     
 }
 let config = {
     tableName: 'productos',
     timestamps: true,
-    underscored: false,
+    underscored: true,
 
 
 }

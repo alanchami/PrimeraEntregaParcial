@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const op = db.Sequelize.Op;
-const users = db.User;
+const users = db.Usuario;
 
 const registerController = {
     index: function(req, res){
@@ -13,10 +13,11 @@ const registerController = {
         //creo un usuario con la info de los formularios
         let user = {
         //estoy teniendo informacion en el objeto req, en la propiedad body viaja la info del formulario para llamarla en el controlador.  
-           nombre : req.body.nombre,
-           mail: req.body.mail,
+           nombre : req.body.name,
+           mail: req.body.email,
            nacimiento: req.body.nacimiento,
-           contraseña: bcrypt.hashSync(req.body.contraseña, 10), 
+           contraseña: bcrypt.hashSync(req.body.password, 10), 
+           celular: req.body.celular
        }
        //guardo el usuario registrado en la DB
        users.create(user)
