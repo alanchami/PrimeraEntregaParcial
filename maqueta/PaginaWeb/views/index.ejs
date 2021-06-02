@@ -33,78 +33,29 @@
 			<div class="col-12">
 				<h2 class="products-title">Novedades</h2>
 			</div>
+			<%   for (let i = 0; i < 4; i++) { %>
+                <% const reloj = relojes[i]; %>
+                <div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="/product">
+							<figure class="product-box_image">
+								<img src=<%= reloj.image %> alt="Reloj Swatch">
+							</figure>
+							<article class="product-box_data">
+								<h2 class="name1"> <%= reloj.name %></h2>
+								<p><%= reloj.name %> <br>
+								       <br>
+								  
+									   <%= reloj.descripcion %>
+								</p>
+								<p>Comentarios: 12</p>
+							</article>
+						</a>
+					</section>
+				</div>
+            <% } %>
+		
 			
-			<!-- Show the "ultimos" products -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj1.png" alt="Reloj Swatch">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1"> Swatch G4300</h2>
-							<p>Marca: Swatch <br>
-							   Modelo: G4300 <br>
-							   Año: 2019 
-							   Color: Rosa
-							</p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj2.png" alt="Reloj Hilfiger">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Hilfiger D500</h2>
-							<p>Marca: Hilfiger<br>
-								Modelo: D500<br>
-								Año: 2018
-								Color: Azul
-							</p>
-							<p>Comentarios: 10</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj4.png" alt="Reloj Swatch">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Swatch MC4000</h2>
-							<p>Marca: Swatch<br>
-								Modelo: MC4000<br>
-								Año: 2020
-								Color: Rose Gold</p>
-							<p>Comentarios: 25</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj3.png" alt="Reloj Wellington">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Wellington G1</h2>
-							<p>Marca: Wellington<br>
-								Modelo: G1<br>
-								Año: 2018
-								Color: Blanco</p>
-							<p>Comentarios: 31</p>
-						</article>
-					</a>
-				</section>
-			</div>
 		</div>
 	</div>
 	<!-- /Novedades -->
@@ -116,74 +67,27 @@
 			</div>
 			
 			<!-- Show the "ultimos" products -->
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj5.png" alt="Reloj Skmei">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Skmei R2021</h2>
-							<p>Marca: Skmei<br>
-								Modelo: R2021<br>
-								Año: 2021
-								Color: Rose Gold</p>
-							<p>Comentarios: 43</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj8.png" alt="Reloj Rolex">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Rolex Daytona</h2>
-							<p>Marca: Rolex<br>
-								Modelo: Daytona<br>
-								Año: 2019
-								Color: Dorado y verde</p>
-							<p>Comentarios: 36</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj7.png" alt="Reloj Mam">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Mam Dial 2022</h2>
-							<p>Marca: Mam<br>
-								Modelo: Dial 2022<br>
-								Año: 2017
-								Color: Negro</p>
-							<p>Comentarios: 18</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src="images/products/Reloj6.png" alt="Reloj Richard Mille">
-						</figure>
-						<article class="product-box_data">
-							<h2 class="name1">Richard Mille</h2>
-							<p> Marca: Richard Mille <br>
-								Modelo: RM11-03<br>
-								Año: 2016
-							    Color: Negro</p>
-							<p>Comentarios: 27</p>
-						</article>
-					</a>
-				</section>
-			</div>
+			<%   for (let i = 4; i < 8; i++) { %>
+                <% const reloj = relojes[i]; %>
+                <div class="col-12 col-sm-6 col-lg-3">
+					<section class="product-box">
+						<a href="/product">
+							<figure class="product-box_image">
+								<img src=<%= reloj.image %> alt="Reloj Swatch">
+							</figure>
+							<article class="product-box_data">
+								<h2 class="name1"> <%= reloj.name %></h2>
+								<p><%= reloj.name %> <br>
+								       <br>
+								  
+									   <%= reloj.descripcion %>
+								</p>
+								<p>Comentarios: 12</p>
+							</article>
+						</a>
+					</section>
+				</div>
+            <% } %>
 		</div>
 	</div>
 	<!-- /Más comentados -->

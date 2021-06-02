@@ -1,6 +1,6 @@
 module.exports = function(sequelize,dataTypes){
     //definir un alias sequelize que va a identificar  internamente el archivo de modelo.
-let alias = 'User';
+let alias = 'Usuario';
 //describir la configuracion de las columnas de la tabla
 let cols={
     id:{
@@ -20,25 +20,31 @@ let cols={
     password:{
         type:dataTypes.STRING,
     },
-    createdAT:{
+    telefono: { 
+        type: dataTypes.INTEGER, 
+    }, 
+    createdAt:{
         type:dataTypes.DATE,
+        field: "createdAT"
     },
-   updatedAT:{
+   updatedAt:{
         type:dataTypes.DATE,
+        field: "updatedAT"
     },
-    deletedAT:{
+    deletedAt:{
         type:dataTypes.DATE,
+        field: "deletedAT"
     },
     
 }
 let config = {
-    table: 'usuarios',
+    tableName: 'usuarios',
     timestamps: true,
     underscored: false,
 
 
 }
-const User=sequelize.define(alias,cols,config);
-return User;
+const Usuario=sequelize.define(alias,cols,config);
+return Usuario;
 
 }

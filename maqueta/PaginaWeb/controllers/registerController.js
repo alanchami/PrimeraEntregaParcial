@@ -6,23 +6,30 @@ const users = db.User;
 const registerController = {
     index: function(req, res){
         //Mostrar el formulario de registro
-        return res.render('register');
+        return res.render('register', { title: 'Proyecto Integrador 2021'});
     },
+    //metodo store lo uso para guardar la informacion en la base de datos
     store: function(req, res){ 
-        // Guardar un usuario en la db
+        //creo un usuario con la info de los formularios
         let user = {
+        //estoy teniendo informacion en el objeto req, en la propiedad body viaja la info del formulario para llamarla en el controlador.  
            nombre : req.body.nombre,
            mail: req.body.mail,
            nacimiento: req.body.nacimiento,
            contraseña: bcrypt.hashSync(req.body.contraseña, 10), 
        }
+       //guardo el usuario registrado en la DB
        users.create(user)
+       //redirecciona a la pagina login una vez ya registrado el usuario para que inicie sesion. 
        .then( user => {
         return res.redirect('/login')
        })
-       .catch(e => {console.log(e)});
+
+       .catch(error => {
+           console.log(error)
+        });
 
     }
-}
+    }
 
 module.exports = registerController;
