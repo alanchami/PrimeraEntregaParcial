@@ -13,16 +13,17 @@ const registerController = {
         //creo un usuario con la info de los formularios
         let user = {
         //estoy teniendo informacion en el objeto req, en la propiedad body viaja la info del formulario para llamarla en el controlador.  
-           nombre : req.body.name,
-           mail: req.body.email,
+           name : req.body.name,
+           email: req.body.email,
            nacimiento: req.body.nacimiento,
-           contraseña: bcrypt.hashSync(req.body.password, 10), 
-           celular: req.body.celular
+           password: bcrypt.hashSync(req.body.password, 10), 
+           telefono: req.body.telefono
        }
        //guardo el usuario registrado en la DB
        users.create(user)
        //redirecciona a la pagina login una vez ya registrado el usuario para que inicie sesion. 
-       .then( user => {
+       .then( user => { 
+         
         return res.redirect('/login')
        })
 
