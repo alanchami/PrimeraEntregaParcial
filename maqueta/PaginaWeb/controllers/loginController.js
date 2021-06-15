@@ -22,4 +22,4 @@ let loginController = {
         .catch( error => {console.log(error)})
     }}
 
-module.exports = loginController;
+ module.exports = loginController;
