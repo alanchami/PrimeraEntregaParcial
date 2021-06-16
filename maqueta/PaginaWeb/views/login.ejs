@@ -42,13 +42,17 @@
 				  <form class="forms_form" action="login" method="POST" >
 					<fieldset class="forms_fieldset">
 					  <div class="forms_field" >
-						<input type="email" name="email" placeholder="Email" class="forms_field-input" required autofocus />
+						<input type="email" name="email" placeholder="Email" class="forms_field-input"  /> <!--Incluir "required autofocus" para que sea obligatorio el campo-->
 					  </div>
 					  <div class="forms_field">
-						<input type="password" placeholder="Password" class="forms_field-input" required />
+						<input type="password" placeholder="Password" class="forms_field-input"  /> <!--incluir el required en el final para que sea obligatorio el campo-->
 					  </div>
 					</fieldset>
 					<div class="forms_buttons">
+						<p>
+							<input type="checkbox" name="rememberme" value="ok">
+							Recordame
+						</p>
 					  <button type="button" class="forms_buttons-forgot">Forgot password?</button>
 					  <button class="user_unregistered-signup" id="signup-button">Log In</button>
 					</div>
@@ -92,7 +96,7 @@
 	<!-- footer -->
 	<%- include('./partials/footer')%>
 	<!-- /footer -->
-	<script src="/PrimeraEntregaParcial/maqueta/PaginaWeb/public/javascripts/register.js"></script>
+	<!--<script src="/PrimeraEntregaParcial/maqueta/PaginaWeb/public/javascripts/register.js"></script>-->
 </body>
 
 </html>

@@ -80,7 +80,11 @@ hr {
   text-decoration: none;
 
 }
-
+.saludo{
+padding-left: 0px;
+  font-size: 28px;
+  font-family: cursive;
+}
 .main-header_credit-link {
   font-size: 1.5em;
   margin-top: 20px;
@@ -148,6 +152,9 @@ hr {
   cursor: pointer;
   font-size: 1em;
 }
+.logouttext{
+  font-size: 14px;
+}
 
 .logout:hover{
   color: #1259c3;
@@ -178,21 +185,27 @@ hr {
   margin-bottom: 30px;
 }
 
-
-
+.logout{
+  font-size: 10px;
+}
+.li1{
+padding-bottom: 90px;
+}
+.imagenlogo{
+  padding-bottom: 90px;
+}
 .h--1{
+
   transition: width 2s, height 2s, transform 2s;
   -moz-transition: width 2s, height 2s, -moz-transform 2s;
   -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
   -o-transition: width 2s, height 2s,-o-transform 2s;
 }
 .h--2{
-  transition: width 2s, height 2s, transform 2s;
-  -moz-transition: width 2s, height 2s, -moz-transform 2s;
-  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
-  -o-transition: width 2s, height 2s,-o-transform 2s;
+  padding-bottom: 90px;
 }
 .h--3{
+
   transition: width 2s, height 2s, transform 2s;
   -moz-transition: width 2s, height 2s, -moz-transform 2s;
   -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
@@ -207,14 +220,8 @@ hr {
   -webkit-transform : scale(0.7);   /* Chrome - Safari */
   -o-transform : scale(0.7);    
     }    /* Opera */
-    .h--2:hover{
-      /* tranformamos el elemento al pasar el mouse por encima al doble de
-         su tamaño con scale(2). */
-      transform : scale(0.7);
-      -moz-transform : scale(0.7);      /* Firefox */
-      -webkit-transform : scale(0.7);   /* Chrome - Safari */
-      -o-transform : scale(0.7);        /* Opera */
-  }
+    
+  
   .h--3:hover{
     /* tranformamos el elemento al pasar el mouse por encima al doble de
        su tamaño con scale(2). */

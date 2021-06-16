@@ -25,48 +25,47 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(session( //configuración antes de las rutas.
-  // { secret:'baseDeDatos',
-    // resave: false,
-    // saveUninitialized: true }
-//));
+app.use(session( //configuración antes de las rutas.
+   { secret:'baseDeDatos',
+     resave: false,
+     saveUninitialized: true }
+));
 
-// Antes de las rutas. Esta funcion middleware lo que hace es 
-// dejar disponible los datos de sessión para todas las vistas
-// app.use(function(req, res, next){
+// Antes de las rutas. Esta funcion middleware lo que hace es dejar disponible los datos de sessión para todas las vistas
+app.use(function(req, res, next){
   //console.log('En session middleware');
   //console.log(req.session.user);
-  //if(req.session.user != undefined){
-    //res.locals = req.session.user;
-    
+  if(req.session.user != undefined){
+    res.locals = req.session.user;
+  }
     //console.log(res.locals);
-    //return next();
-  //} 
-  //return next(); //Clave para que el proceso siga adelante.  
-// })
+    return next();
+  } )
+ //Clave para que el proceso siga adelante.  
+
 
 //Gestionar la coockie.
-//app.use(function(req, res, next){
+app.use(function(req, res, next){
   //Solo quiero hacerlo si tengo una coockie
-  //if(req.cookies.userId != undefined && req.session.user == undefined){
-    //let idDeLaCookie = req.cookies.userId;
+  if(req.cookies.userId != undefined && req.session.user == undefined){
+    let idDeLaCookie = req.cookies.userId;
     
-    //db.User.findByPk(idDeLaCookie)
-    //.then( user => {
-      //console.log('en cookie middleware trasladando');
-      //req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
+    db.Usuario.findByPk(idDeLaCookie)
+    .then( user => {
+     // console.log('en cookie middleware trasladando');
+      req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
       //console.log('en cookie middleware');
       //console.log(req.session.user);
-      //res.locals = user; //Se corrije si usamos user.dataValues
-      //return next();
-    //})
-    //.catch( e => {console.log(e)})
-  //} else {
+      res.locals = user; //Se corrije si usamos user.dataValues
+      return next();
+    })
+    .catch( e => {console.log(e)})
+  } else {
     //Si no tengo cookie quiero que el programa continue
-    //return next();
-  //}
+    return next();
+  }
 
-//})
+})
 
 app.use('/', indexRouter);
 app.use ('/product', productRouter)
