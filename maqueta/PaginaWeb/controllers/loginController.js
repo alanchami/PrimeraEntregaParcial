@@ -17,7 +17,7 @@ const loginController = {
             //Paso la informacion obtenida y guardo ese usuario en session
             //req.session.user = user ; 
             // return res.redirect ('/');
-            console.log (user)
+            return res.send (user)
         })
         .catch( error => {console.log(error)})
     }}

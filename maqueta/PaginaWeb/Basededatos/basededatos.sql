@@ -12,9 +12,9 @@ email varchar (255) not null,
 nacimiento date not null, 
 password varchar (255) not null, 
 telefono int unsigned not null,
-createdAT datetime,
-updatedAT datetime,
-deletedAT datetime
+created_at datetime,
+updated_at datetime,
+deleted_at datetime
 );
 create table productos (
 id INT unsigned PRIMARY KEY AUTO_INCREMENT,
@@ -23,27 +23,27 @@ image varchar (255) not null,
 name varchar (255) not null, 
 descripcion varchar (255) not null,
 -- creo columna donde va a caer la clave foranea
-usuariosId int unsigned not null,
+usuarios_id int unsigned not null,
 -- 22 para poder guardar el movimiento que va teniendo el registro se utiliza: createdAT,upadatedAT,deletedAT
-createdAT datetime,
-updatedAT datetime,
-deletedAT datetime,
+created_at datetime,
+updated_at datetime,
+deleted_at datetime,
 -- creo la clave foranea diciendo que lo que va a ir al campo userId va a ser unicamente del renglon numero 7 
-foreign key (usuariosId) references usuarios(id)
+foreign key (usuarios_id) references usuarios(id)
 );
 
 create table comentarios (
 id INT unsigned PRIMARY KEY AUTO_INCREMENT,
-productosId int unsigned not null, 
-usuariosId int unsigned not null, 
+productos_id int unsigned not null, 
+usuarios_id int unsigned not null, 
 name varchar (255) not null, 
 description text,
-createdAT datetime,
-updatedAT datetime,
-deletedAT datetime,
+created_at datetime,
+updated_at datetime,
+deleted_at datetime,
 
-foreign key (productosId) references productos(id),
-foreign key (usuariosId) references usuarios(id)
+foreign key (productos_id) references productos(id),
+foreign key (usuarios_id) references usuarios(id)
 );
 
 -- cargar datos en las tablas
