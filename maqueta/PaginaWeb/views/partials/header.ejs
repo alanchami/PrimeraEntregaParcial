@@ -1,22 +1,35 @@
 
 	<header class="main-header">
 	<div class="container">
+		<!--<% if(locals.name) { %>-->
 		<div class="row align-items-center">
 			<div class="col-5 col-md-2">
 				<a href="/" class="main-header_home-link">
-					<img class="imagenlogo" src="./images/LOGO.png">
+					<img class="imagenlogo2" src="./images/LOGO.png">
 					
 				</a>
+				
 			</div>
-
+			
+		<!--	<% } else {%>-->
+				<div class="row align-items-center">
+					<div class="col-5 col-md-2">
+						<a href="/" class="main-header_home-link">
+							<img class="imagenlogo" src="./images/LOGO.png">
+							
+						</a>
+					</div>
+					<!--<%}%>-->
 			<div class="col-7 col-md-6">
 				<form action="search-results.html" method="GET" class="search-form">
 					<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
 					<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+					
 				</form>
-				<% if(locals.name) { %>
+				<!--<% if(locals.name) { %>
+					
 			   
-					<p class="saludo">Bienvenido <%= locals.name %> !</p> <%}%>
+					<p class="saludo">Bienvenido <%= locals.name %> !</p> <%}%>-->
 			</div>
 
 			
@@ -44,20 +57,17 @@
 					</form>
 				</li> -->
 				<% if(locals.name) { %>
-			   
-						
-				
-						 
-						<div class="h--2">
+						<div class="li1">
 							<form action="/login/logout" method="POST" >
 							<button class= "logouttext" type="submit">Log Out</button></form>
 						</div>
 					
 					<li class="li1"><a href="/users">
-						Mi perfil <i class="fas fa-user"></i>
+						<%= locals.name %> <i class="fas fa-user"></i>
 					</a>
 				</li>
 				<li class="li1"><a href="/product/product-add">Cargar productos</a></li>
+				
 
 					<% } else {%>
 						<li>
@@ -68,6 +78,7 @@
 							<div class="h--3"><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></div>
 						</li>
 					<%}%>
+					
 				
 				<!--<li>
 					<a href="/miperfil">Perfil <i class="far fa-address-card"></i>

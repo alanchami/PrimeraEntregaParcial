@@ -81,7 +81,7 @@ hr {
 
 }
 .saludo{
-padding-left: 0px;
+padding-left: 0;
   font-size: 28px;
   font-family: cursive;
 }
@@ -189,10 +189,10 @@ padding-left: 0px;
   font-size: 10px;
 }
 .li1{
-padding-bottom: 90px;
+
 }
-.imagenlogo{
-  padding-bottom: 90px;
+.imagenlogo2{
+
 }
 .h--1{
 
@@ -201,9 +201,7 @@ padding-bottom: 90px;
   -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
   -o-transition: width 2s, height 2s,-o-transform 2s;
 }
-.h--2{
-  padding-bottom: 90px;
-}
+
 .h--3{
 
   transition: width 2s, height 2s, transform 2s;
@@ -570,6 +568,11 @@ animation-delay: -5s;
 }
 
 .error{
+  color: rgb(209, 0, 0);
+  font-size: 1.4em;
+}
+
+.error1{
   color: rgb(209, 0, 0);
   font-size: 1.4em;
 }
