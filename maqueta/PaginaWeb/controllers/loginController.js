@@ -12,10 +12,10 @@ const loginController = {
     login: function (req, res){
 
         //control de acceso
-       // if (req.session.user != undefined){
-           // return res.redirect ('/');
-           // } 
-           // else {
+      if (req.session.user != undefined){
+           return res.redirect ('/');
+           } 
+           else {
 
         // Busco al usuario que se quiere loguear (iniciar sesion).
         //uso findOne porque quiero encontrar UNO SOLO.
@@ -54,7 +54,7 @@ if (req.body.rememberme != undefined){
            
         })
         .catch( error => {console.log(error)})
-    //}
+    }
     },
      logout:function(req,res){
          //destruir la sesion
