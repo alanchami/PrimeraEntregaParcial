@@ -37,10 +37,15 @@ let config = {
     tableName: 'productos',
     timestamps: false,
     underscored: false,
-
-
 }
-const Producto = sequelize.define(alias,cols,config);
-return Producto;
 
+const Producto = sequelize.define(alias,cols,config);
+
+Producto.associate = function (modelos) { 
+    Producto.belongsTo(modelos.Usuario, { 
+    as: "usuario",
+    foreignKey: "usuarios_id"
+    })
+    }
+return Producto;
 }
