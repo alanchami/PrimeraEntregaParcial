@@ -25,27 +25,34 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
+				<% if (relojes.length == 0){%>
+					<h2 class="mafi"> No hay resultados para su criterio de búsqueda </h2>
+					<% } else { %>
 				<h2 class="products-title">Resultados de la busqueda</h2>
-			</div>
-			 
+				<% } %>
+</div>
+
 			<% for(let i=0; i<relojes.length; i++) {%>
-        <div class="col-12 col-sm-6 col-lg-3">
-		<section class="product-box">
-		<a href="/product">
-	    <figure class="product-box_image">
-		<img src= "<%= relojes[i].image %>">
-		</figure>
-		<article class="product-box_data">
-		<h2 class="name1"> <%= relojes[i].name %></h2>
-		<p><%= relojes[i].name %> <br>
-		 <br>
-		<%= relojes[i].descripcion %>
-	  </p>
-	<p>Comentarios: 12</p>
-	</article>
-	</a>
-	</section>
-    </div>
+
+					<div class="col-12 col-sm-6 col-lg-3">
+						<section class="product-box">
+						<a href="/product">
+						<figure class="product-box_image">
+							<img src= "/<%= relojes[i].image %>">
+						</figure>
+						<article class="product-box_data">
+						<h2 class="name1"> <%= relojes[i].name %></h2>
+						<p><%= relojes[i].name %> <br>
+						 <br>
+						<%= relojes[i].descripcion %>
+					  </p>
+					<p>Comentarios: 12</p>
+					</article>
+					</a>
+					</section>
+					</div>
+				
+     
     <% } %>
 		
 		</div>

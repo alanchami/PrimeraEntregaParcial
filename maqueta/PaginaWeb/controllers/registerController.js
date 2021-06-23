@@ -4,9 +4,15 @@ const op = db.Sequelize.Op;
 const users = db.Usuario;
 
 const registerController = {
+    
     index: function(req, res){
+        if (req.session.user == undefined){
         //Mostrar el formulario de registro
         return res.render('register', { title: 'Proyecto Integrador 2021'});
+    } else {
+        
+        return res.redirect ('/');
+       }
     },
     //metodo store lo uso para guardar la informacion en la base de datos
     store: function(req, res){ 

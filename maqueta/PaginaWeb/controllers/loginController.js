@@ -6,19 +6,18 @@ const op = db.Sequelize.Op;
 const loginController = {
     
     show: function (req, res) { 
+        if (req.session.user == undefined){
         return res.render ('login', { title: 'Proyecto Integrador 2021'})
+    } else {
+        
+     return res.redirect ('/');
+    }
     },
     
     login: function (req, res){
 
         //control de acceso
-      if (req.session.user != undefined){
-           return res.redirect ('/');
-           } 
-           else {
-
-        // Busco al usuario que se quiere loguear (iniciar sesion).
-        //uso findOne porque quiero encontrar UNO SOLO.
+      
         db.Usuario.findOne({
             where: [{email: req.body.email}]
             //Quiero buscar el registro en donde el campo email de la base de datos coincida con el dato que recibiste en el formulario.
@@ -54,7 +53,11 @@ if (req.body.rememberme != undefined){
            
         })
         .catch( error => {console.log(error)})
-    }
+    
+           
+        // Busco al usuario que se quiere loguear (iniciar sesion).
+        //uso findOne porque quiero encontrar UNO SOLO.
+       
     },
      logout:function(req,res){
          //destruir la sesion
