@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
+	<link width="" rel="shortcut icon" href="/images/logo-mercado-liebre.jpg" />
 
 	<title> Mercado Liebre Argentina</title>
 	<!-- Font Awesome Stylesheet -->
@@ -22,18 +22,37 @@
 	<!-- /Header -->
 
 	<!-- Novedades -->
-	
-			<%   for (let i = 0; i < 4; i++) { %>
-                <% const reloj = relojes[i]; %>
-              
-				<ul>
-					<li>
-						
-					</li>
-				</ul>
-				
-            <% } %>
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Resultados de la busqueda</h2>
+			</div>
+			 
+			<% for(let i=0; i<relojes.length; i++) {%>
+        <div class="col-12 col-sm-6 col-lg-3">
+		<section class="product-box">
+		<a href="/product">
+	    <figure class="product-box_image">
+		<img src= "<%= relojes[i].image %>">
+		</figure>
+		<article class="product-box_data">
+		<h2 class="name1"> <%= relojes[i].name %></h2>
+		<p><%= relojes[i].name %> <br>
+		 <br>
+		<%= relojes[i].descripcion %>
+	  </p>
+	<p>Comentarios: 12</p>
+	</article>
+	</a>
+	</section>
+    </div>
+    <% } %>
 		
+		</div>
+	</div>
+	
+              
+				
 			
 		
 

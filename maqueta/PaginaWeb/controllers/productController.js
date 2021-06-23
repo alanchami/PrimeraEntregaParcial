@@ -10,15 +10,15 @@ const productController = {
         return res.render ('product-add', { title: 'Proyecto Integrador 2021'})
     },
     search: function (req,res){
-        let infoABuscar = req.query.search;
+        let info = req.query.search;
         db.Producto.findAll({
             where: [
-                {name: {[op.like]: '%' + infoABuscar + '%'}}
-            ]
+                {name: {[op.like]: '%' + info + '%'}
+            }]
         })
-        .then( relojes =>{
-            return res.render ('index', { title: 'Proyecto Integrador 2021', relojes: relojes})
-          // return res.send(data);
+        .then( data =>{
+            return res.render ('search-results', { title: 'Proyecto Integrador 2021', relojes : data})
+          //return res.send(data);
         })
         .catch(error =>{
             console.log(error);
