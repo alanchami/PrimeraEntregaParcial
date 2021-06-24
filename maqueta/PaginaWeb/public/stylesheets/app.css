@@ -15,7 +15,11 @@
 .container12{
   background-color: red;
 }
-
+.mafi{
+  font-size: 60px;
+  text-align: center;
+  color: black;
+}
 /*====== Basics ======*/
 * {
   box-sizing: border-box;
