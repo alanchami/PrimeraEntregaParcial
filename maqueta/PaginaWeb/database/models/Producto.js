@@ -46,6 +46,10 @@ Producto.associate = function (modelos) {
     as: "usuario",
     foreignKey: "usuarios_id"
     })
+Producto.hasMany(modelos.Comentario,{
+    as:'comentarios',
+    foreignKey: 'productos_id',
+})
     }
 return Producto;
 }
