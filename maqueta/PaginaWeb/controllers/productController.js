@@ -29,8 +29,13 @@ const productController = {
     },
 
     add: function (req, res) { 
+        //control para el acceso
+        if (req.session.user == undefined ) { 
+            return res.redirect ('/register');
+        } else { 
         return res.render ('product-add', { title: 'Proyecto Integrador 2021'})
-    },
+    } } , 
+    
     search: function (req,res){
         let info = req.query.search;
         db.Producto.findAll({

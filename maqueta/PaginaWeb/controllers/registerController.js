@@ -10,7 +10,6 @@ const registerController = {
         //Mostrar el formulario de registro
         return res.render('register', { title: 'Proyecto Integrador 2021'});
     } else {
-        
         return res.redirect ('/');
        }
     },
