@@ -13,6 +13,7 @@ const productController = {
          return res.render ('product', { title: 'Proyecto Integrador 2021', product : data }) //renderizo la vista con la info que 
          //me trajo el findByPk, es decir trajo la info del producto y ahora tamnien la del usuario.
        })
+       
     },
 
     add: function (req, res) { 
