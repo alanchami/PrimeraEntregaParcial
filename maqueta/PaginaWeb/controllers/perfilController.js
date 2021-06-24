@@ -7,4 +7,4 @@ addPerfil: function (req, res) {
     }
 }
 
-module.exports = perfilController
+module.exports = perfilController;

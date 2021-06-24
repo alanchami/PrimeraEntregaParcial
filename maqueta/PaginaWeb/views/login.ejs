@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
 
-	<title> <%= title %> </title>
+	
 	
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -17,13 +17,16 @@
 	<link rel="stylesheet" href="./stylesheets/app.css">
 </head>
 
-<body>
+
 	<!-- Header -->
 	<%- include('./partials/header')%>
 	<!-- /Header -->
 
 	<!-- Novedades -->
 	<body>
+		
+
+
 		<section class="user">
 			<div class="user_options-container">
 			  <div class="user_options-text">
@@ -39,16 +42,23 @@
 			  <div class="user_options-forms" id="user_options-forms">
 				<div class="user_forms-login">
 				  <h2 class="forms_title">Login</h2>
-				  <form class="forms_form" action="miperfil">
+				  <% if (locals.errors){ %>
+					<p class="error1"> <%= locals.errors.message %> </p>
+					<% } %>
+				  <form class="forms_form" action="login" method="POST" >
 					<fieldset class="forms_fieldset">
-					  <div class="forms_field">
-						<input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+					  <div class="forms_field" >
+						<input type="email" name="email" placeholder="Email" class="forms_field-input"  /> <!--Incluir "required autofocus" para que sea obligatorio el campo-->
 					  </div>
 					  <div class="forms_field">
-						<input type="password" placeholder="Password" class="forms_field-input" required />
+						<input type="password" name="password" placeholder="Password" class="forms_field-input"  /> <!--incluir el required en el final para que sea obligatorio el campo-->
 					  </div>
 					</fieldset>
 					<div class="forms_buttons">
+						<p>
+							<input type="checkbox" name="rememberme" value="ok">
+							Recordame
+						</p>
 					  <button type="button" class="forms_buttons-forgot">Forgot password?</button>
 					  <button class="user_unregistered-signup" id="signup-button">Log In</button>
 					</div>
@@ -92,7 +102,7 @@
 	<!-- footer -->
 	<%- include('./partials/footer')%>
 	<!-- /footer -->
-	<script src="/PrimeraEntregaParcial/maqueta/PaginaWeb/public/javascripts/register.js"></script>
+	<!--<script src="/PrimeraEntregaParcial/maqueta/PaginaWeb/public/javascripts/register.js"></script>-->
 </body>
 
 </html>

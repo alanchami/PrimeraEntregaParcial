@@ -16,7 +16,7 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include('./partials/headerLogueado')%>
+	<%- include('./partials/header')%>
 	<!-- /Header -->
 
 	<!-- Datos del usuario -->
@@ -27,7 +27,7 @@
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"> Jose María Saturno
+					<h1 class="main-title"> <%= locals.name %>
 						<a href="miperfil/profile-editar">
 							<i class="fas fa-cog"></i>
 						</a>
