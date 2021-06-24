@@ -68,7 +68,7 @@ values (default, "Alan Chami", "achami@udesa.edu.ar" ,"2001-12-31", "Messi2010",
 
  insert into comentarios
  values (default, 1,1,"Martin Paredes ","Ha sido una de las mejores compras de mi vida. Buena atención y rápida entrega. Soy felíz.",default,default,default),
- (default,2,2, "Federico Djamus" ,"precio-calidad muy buena. Ponerse este reloj y salir a la calle es una sensación inexplicable. Muchas gracias!!",default,default,default),
- (default,3,3, "Matias Saal","No me gustó. Te lo venden con la imagen como si fueses a comprar un Rolex Yacht-Master II y te terminas llevando un juguete.",default,default,default),
- (default,4,4, "Ilan Umansky","Estoy fascinado con mi nuevo Swatch G4300. Una de las mejores inversiones de mi vida sin lugar a dudas. Me gustó todo, desde la presentación hasta la malla.",default,default,default),
- (default, 5,5,"Lucas Liwsky","Producto 8 puntos. Hasta el momento, funciona de diez. La correa es de calidad media y el resto de primera.", default,default,default);
+ (default,1,2, "Federico Djamus" ,"precio-calidad muy buena. Ponerse este reloj y salir a la calle es una sensación inexplicable. Muchas gracias!!",default,default,default),
+ (default,1,3, "Matias Saal","No me gustó. Te lo venden con la imagen como si fueses a comprar un Rolex Yacht-Master II y te terminas llevando un juguete.",default,default,default),
+ (default,1,4, "Ilan Umansky","Estoy fascinado con mi nuevo Swatch G4300. Una de las mejores inversiones de mi vida sin lugar a dudas. Me gustó todo, desde la presentación hasta la malla.",default,default,default),
+ (default,1,5,"Lucas Liwsky","Producto 8 puntos. Hasta el momento, funciona de diez. La correa es de calidad media y el resto de primera.", default,default,default);

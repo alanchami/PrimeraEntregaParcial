@@ -18,7 +18,8 @@ const productController = {
        .then (data => { 
            //toda esta informacion queda almacenada en este "data"
           //return res.send(data);
-          return res.render ('product', { title: 'Proyecto Integrador 2021', producto : data }) 
+          console.log(data.comentarios);
+           return res.render ('product', { title: 'Proyecto Integrador 2021', producto : data }) 
          //renderizo la vista con la info que 
          //me trajo el findByPk, es decir trajo la info del producto y ahora tamnien la del usuario.
        })
@@ -28,6 +29,7 @@ const productController = {
        
     },
 
+
     add: function (req, res) { 
         //control para el acceso
         if (req.session.user == undefined ) { 
@@ -35,6 +37,18 @@ const productController = {
         } else { 
         return res.render ('product-add', { title: 'Proyecto Integrador 2021'})
     } } , 
+
+    store: function (req, res) { 
+        //control para el acceso
+       const {name,descripcion,created_at} = req.body;
+       db.Producto.create({name:name, image:"24.jpg", usuarios_id:req.session.user.id,descripcion:descripcion, created_at:created_at})
+
+       .then( data =>{
+           
+           console.log(data);
+           return res.redirect("/miperfil");
+       })
+    } , 
     
     search: function (req,res){
         let info = req.query.search;
