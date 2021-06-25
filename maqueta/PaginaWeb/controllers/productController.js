@@ -39,8 +39,11 @@ const productController = {
     } } , 
 
     store: function (req, res) { 
-        //control para el acceso
-       const {name,descripcion,created_at} = req.body;
+      
+       name = req.body.name
+       descripcion = req.body.descripcion 
+       created_at = req.body.created_at
+
        db.Producto.create({name:name, image:"24.jpg", usuarios_id:req.session.user.id,descripcion:descripcion, created_at:created_at})
 
        .then( data =>{
