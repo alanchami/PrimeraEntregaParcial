@@ -15,28 +15,86 @@ const registerController = {
     },
     //metodo store lo uso para guardar la informacion en la base de datos
     store: function(req, res){ 
-        //creo un usuario con la info de los formularios
-        let user = {
-        //estoy teniendo informacion en el objeto req, en la propiedad body viaja la info del formulario para llamarla en el controlador.  
-           name : req.body.name,
-           email: req.body.email,
-           nacimiento: req.body.nacimiento,
-           password: bcrypt.hashSync(req.body.password, 10), 
-           telefono: req.body.telefono
-       }
-       //guardo el usuario registrado en la DB
-       users.create(user)
-       //redirecciona a la pagina login una vez ya registrado el usuario para que inicie sesion. 
-       .then( user => { 
+        let errors = {}
+        
+        if(req.body.email == ""){
+            errors.message ="el mail es obligatorio";
+            res.locals.errors = errors;
+            return res.render('register')   
+        } else if(req.body.password == ""){
+            errors.message ="la contraseña es obligatorio";
+            res.locals.errors = errors;
+            return res.render('register');
+        } else if(req.body.retypePassword == ""){
+            errors.message = "retry password es obligatorio";
+            res.locals.errors = errors;
+            return res.render('register'); 
+        }else {
+            users.findOne({
+                where: [{email: req.body.email}]
+
+            })
+                .then(function(user){
+                    
+                    if(user != null){
+                        errors.message ="el mail ya esta registrado, elija otro";
+                        res.locals.errors = errors;
+                        return res.render('register'); 
+                    } else {
+                           //creo un usuario con la info de los formularios
+     
+                           let user = {
          
-        return res.redirect('/login')
-       })
+                            //estoy teniendo informacion en el objeto req, en la propiedad body viaja la info del formulario para llamarla en el controlador.  
+          
+                            name : req.body.name,
+          
+                            email: req.body.email,
+          
+                            nacimiento: req.body.nacimiento,
+          
+                            password: bcrypt.hashSync(req.body.password, 10), 
+          
+                            telefono: req.body.telefono
+          
+                        }
+          
+                        //guardo el usuario registrado en la DB
+          
+                        users.create(user)
+          
+                        //redirecciona a la pagina login una vez ya registrado el usuario para que inicie sesion. 
+          
+                        .then( user => { 
+          
+                            
+           
+                            return res.redirect('/')
+         
+                        })
+    
+         
+                        .catch(error => {
+           
+                            console.log(error)
+          
+                        });
 
-       .catch(error => {
-           console.log(error)
-        });
+                    }
+                })
+               
+                .catch(error => {console.log(error);})
 
+            }
     }
-    }
+
+     
+
+}
+    
 
 module.exports = registerController;
+
+
+
+

@@ -39,6 +39,11 @@
 			  <div class="user_options-forms" id="user_options-forms">
 				<div class="user_forms-login">
 				  <h2 class="forms_title">REGISTRATE</h2>
+
+				  <% if (locals.errors){ %>
+					<p class="error1"> <%= locals.errors.message %> </p>
+					<% } %>
+
 				  <form class="forms_form" action="/register" method="POST">
 					<fieldset class="forms_fieldset">
 					  <div class="forms_field">
