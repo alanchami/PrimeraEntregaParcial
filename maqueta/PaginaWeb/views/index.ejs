@@ -34,22 +34,23 @@
 			<div class="col-12">
 				<h2 class="products-title">Novedades</h2>
 			</div>
-			<%   for (let i = 0; i < 4; i++) { %>
-                <% const reloj = relojes[i]; %>
+			<% for(let i=0; i<relojes.length; i++) {%>
                 <div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
 					    <a href="/product/detail/ <%= relojes[i].id%>">
 							<figure class="product-box_image">
-								<img src= <%= reloj.image %>
+								<img src= <%= relojes[i].image %>
 							</figure>
 							<article class="product-box_data">
-								<h2 class="name1"> <%= reloj.name %></h2>
-								<p><%= reloj.name %> <br>
+								<h2 class="name1"> <%= relojes[i].name %></h2>
+								<p> <br>
 								       <br>
 								  
-									   <%= reloj.descripcion %>
+									  
 								</p>
-								<p>Comentarios: 12</p>
+                          
+								<p><a href="/">Usuario: <%= relojes[i].usuario.name %> 	</a></p>
+						
 							</article>
 						</a>
 					</section>
@@ -68,22 +69,21 @@
 			</div>
 			
 			<!-- Show the "ultimos" products -->
-			<%   for (let i = 4; i < 8; i++) { %>
-                <% const reloj = relojes[i]; %>
+			<% for(let i=0; i<relojes.length; i++) {%>
                 <div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/detail/ <%= relojes[i].id%>">
+						<a href="/product/detail/ <%= relojes[i].id%>"></a>
 							<figure class="product-box_image">
-								<img src=<%= reloj.image %> 
+								<img src=<%= relojes[i].image %> 
 							</figure>
 							<article class="product-box_data">
-								<h2 class="name1"> <%= reloj.name %></h2>
-								<p><%= reloj.name %> <br>
+								<h2 class="name1"> <%= relojes[i].name %></h2>
+								<p><%= relojes[i].name %> <br>
 								       <br>
 								  
-									   <%= reloj.descripcion %>
+									   <%= relojes[i].descripcion %>
 								</p>
-								<p>Comentarios: 12</p>
+								<p> Usuario: <%= relojes[i].usuario.name %> </p>
 							</article>
 						</a>
 					</section>

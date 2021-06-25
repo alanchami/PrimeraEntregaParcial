@@ -7,6 +7,7 @@ router.get('/detail/:id', productController.show);
 router.get ('/product-add', productController.add);
 router.get ('/search', productController.search);
 router.post ('/store', productController.store);
+router.post ('/comentario', productController.comment);
 
 
 

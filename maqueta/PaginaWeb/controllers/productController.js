@@ -54,14 +54,18 @@ const productController = {
     } , 
     
     search: function (req,res){
+        
         let info = req.query.search;
         db.Producto.findAll({
             where: [
                 {name: {[op.like]: '%' + info + '%'}
-            }]
+            }],
+            include:[
+                {association:'usuario'}
+            ]
         })
         .then( data =>{
-            //return res.send(data);
+        //eturn res.send(data);
             return res.render ('search-results', { title: 'Proyecto Integrador 2021', relojes : data})
           
         })
@@ -70,7 +74,32 @@ const productController = {
         })
 
 
-    }
+    },
+    comment: function (req, res) {
+        let data = req.body;
+        
+            let comentario = {
+               productos_id: data.productos_id,
+                usuarios_id: req.session.usuarios.id,
+                texto: data.description
+            }
+            //3)Guardar producto
+            db.Comentario.create(comentario)
+                .then(() => {
+                 return res.send (comentario)
+                    return res.redirect('/product/detail/' +req.body.idProduct);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+
+        
+        
+
+  
+    
+
+}
 
 }
 

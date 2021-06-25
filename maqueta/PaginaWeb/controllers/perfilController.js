@@ -5,15 +5,20 @@ const perfilController = {
         db.Producto.findAll({
             where:[
                 {usuarios_id:req.session.user.id}
-            ]
+            ],
+            include: [{
+                association:'usuario'
+            }]
         })
         .then(data =>{
-            console.log(data);
+            //return res.send( data);
             return res.render ('profile', { title: 'Proyecto Integrador 2021', productos:data})
 
         })
         
     },
+
+
 addPerfil: function (req, res) { 
         return res.render ('profile-edit', { title: 'Proyecto Integrador 2021'})
     }

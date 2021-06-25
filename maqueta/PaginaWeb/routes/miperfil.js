@@ -4,6 +4,6 @@ const perfilController = require ('../controllers/perfilController');
 
 /* GET home page. */
 router.get('/', perfilController.show);
-router.get ('/profile-editar/:marca', perfilController.addPerfil)
+router.get ('/profile-editar', perfilController.addPerfil)
 
 module.exports = router ;
