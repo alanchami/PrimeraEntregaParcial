@@ -15,20 +15,19 @@ const registerController = {
     },
     //metodo store lo uso para guardar la informacion en la base de datos
     store: function(req, res){ 
-        let errors = {}
+        let errors ={};
         
         if(req.body.email == ""){
             errors.message ="el mail es obligatorio";
             res.locals.errors = errors;
-            return res.render('register')   
+            return res.render('register',{title:'Proyecto Integrador'})   
         } else if(req.body.password == ""){
             errors.message ="la contraseña es obligatorio";
             res.locals.errors = errors;
-            return res.render('register');
+            return res.render('register',{title:'Proyecto Integrador'});
         } else {
             users.findOne({
                 where: [{email: req.body.email}]
-
             })
                 .then(function(user){
                     

@@ -79,14 +79,15 @@ const productController = {
         let data = req.body;
         
             let comentario = {
-               productos_id: data.productos_id,
-                usuarios_id: req.session.usuarios.id,
-                texto: data.description
+                productos_id: req.params.id,
+                usuarios_id: req.session.user.id,
+                description: data.description,
+                name:req.session.user.name
             }
             //3)Guardar producto
             db.Comentario.create(comentario)
                 .then(() => {
-                 return res.send (comentario)
+                 //return res.send (comentario)
                     return res.redirect('/product/detail/' +req.body.idProduct);
                 })
                 .catch(error => {

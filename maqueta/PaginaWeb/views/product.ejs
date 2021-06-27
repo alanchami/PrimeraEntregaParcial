@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
 
-	<title> <%= title %> </title>
+	<title>
+		<%= title %>
+	</title>
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Bootstrap Grid Stylesheet -->
@@ -14,67 +17,77 @@
 	<!-- Own Stylesheet -->
 	<link rel="stylesheet" href="/stylesheets/product-detail.css">
 </head>
+
 <body>
 	<!-- Header -->
-	
+
 	<!-- /Header -->
 	<%- include('./partials/header')%>
-	<!-- product detail -->
+		<!-- product detail -->
 
-	
-	
-	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			
-			<h2 class="products-title"></h2> 
-			<p class="product-detail-description">
-				<a href="product-add.html">Editar</a>
-			</p>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/<%= producto.image %>" alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= producto.name %> <br> <%= producto.descripcion %> </p>
-				</article>
-				<% for(let i=0; i<producto.comentarios.length; i++) {%>
-				<div class="col-12 col-lg-4">
-					<div class="row">
-					<section class="comments">
-						<article>
-               <img src="/images/WhatsApp Image 2021-04-13 at 19.50.16.jpeg" alt="">
-							<div class="data">
-								<p class="user">
-								<strong> <a href="/miperfil"> <%= producto.comentarios[i].name %> </a> </strong>
-							<br> <%= producto.comentarios[i].description %> </p>
-							</div>
-						</article>
-					</div>
-						
-						</section>
-					<form class="form" action="/product/comentario" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
-						
-						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-					</form>
-					<hr>
-				</div>
 
+
+		<div class="container products-wrapper">
+			<div class="d-flex align-items-center">
+
+				<h2 class="products-title"></h2>
+				<p class="product-detail-description">
+					<a href="product-add.html">Editar</a>
+				</p>
 			</div>
-
+			<div class="product-detail">
+					<article class="col-12 col-lg-8 product-detail-info">
+						<img src="/<%= producto.image %>" alt="" class="product-detail-img">
+						<p class="product-detail-description">
+							<%= producto.name %> <br>
+								<%= producto.descripcion %>
+						</p>
+					</article>
+					<div class="col-12 col-lg-4">
+				
+					<section class="comments">
+						<div class="row">
+						<form class="form" action="/product/comentario/<%=producto.id%>" method="POST">
+							<input name="description" class="form-input" type="text" value="" placeholder="Agregar comentario">
+							<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+						</form>
+						<% for(let i=0; i<producto.comentarios.length; i++) {%>
+							<div class="row">
+								<div class="col-12 col-lg-4">
+									<article>
+										<img src="/images/WhatsApp Image 2021-04-13 at 19.50.16.jpeg" alt="">
+										<div class="data">
+											<p class="user">
+													<strong> <a href="/miperfil">
+															<%= producto.comentarios[i].name %>
+														</a> </strong>
+													<br>
+													<%= producto.comentarios[i].description %>
+												</p>
+											</div>
+										</article>
+									</div>
+									<% } %>
+					</div>
+				</div>
+				
+						</section>
+							
+							<hr>
+						</div>
+					</div>
 					
-			
-		
-		</div>
-		<% } %>
-	</div>
-	
-	<!-- /product detail -->
+					
+					
+					
+				</div>
+				
+		<!-- /product detail -->
 
-	<!-- footer -->
-	<%- include('./partials/footer')%>
-	<!-- /footer -->
+		<!-- footer -->
+		<%- include('./partials/footer')%>
+			<!-- /footer -->
 
-</body>	
+</body>
+
 </html>
