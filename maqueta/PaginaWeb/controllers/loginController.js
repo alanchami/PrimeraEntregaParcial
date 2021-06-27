@@ -15,8 +15,6 @@ const loginController = {
     },
     
     login: function (req, res){
-
-        //control de acceso
       
         db.Usuario.findOne({
             where: [{email: req.body.email}]
