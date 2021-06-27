@@ -25,11 +25,7 @@ const registerController = {
             errors.message ="la contraseña es obligatorio";
             res.locals.errors = errors;
             return res.render('register');
-        } else if(req.body.retypePassword == ""){
-            errors.message = "retry password es obligatorio";
-            res.locals.errors = errors;
-            return res.render('register'); 
-        }else {
+        } else {
             users.findOne({
                 where: [{email: req.body.email}]
 
@@ -66,14 +62,9 @@ const registerController = {
                         //redirecciona a la pagina login una vez ya registrado el usuario para que inicie sesion. 
           
                         .then( user => { 
-          
-                            
-           
                             return res.redirect('/login')
-         
                         })
-    
-         
+                        
                         .catch(error => {
            
                             console.log(error)
