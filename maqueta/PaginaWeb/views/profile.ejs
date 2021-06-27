@@ -21,11 +21,14 @@
 
 	<!-- Datos del usuario -->
 	
-	<section class="info-usuario container products-wrapper">
+<% if(locals.name) { %>
+	
+ 	<section class="info-usuario container products-wrapper"> 
 		<div class="row">
 			<div class="img-container offset-3 col-2">
 				<img src="/images/fotodeperfil.jpeg" alt="foto de perfil" class="foto-perfil">
 			</div>
+		
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 					<h1 class="main-title"> <%= usuario.name %>
@@ -50,7 +53,38 @@
 		</div>
 		
 	</section>
+<<<<<<< HEAD
 	
+=======
+	<% } %>
+	<% } else {%>
+		<section class="info-usuario container products-wrapper"> 
+			<div class="row">
+				<div class="img-container offset-3 col-2">
+					<img src="images/fotodeperfil.jpeg" alt="foto de perfil" class="foto-perfil">
+				</div>
+			
+				<div class="data-container col-6">
+					<div class="d-flex align-items-center ">
+						
+						<a class="btn mt-3 ml-4" href="">SEGUIR</a>
+					</div>
+					
+					<div>
+						<% for(let i=0; i<productos.length; i++) {%>
+						<ul class="">
+							<li> Productos: <%= productos.length %></li>
+							<li>200 seguidores</li>
+							<li>Comentarios: <%= productos.comentarios %></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		<% } %>
+		<% } %>
+>>>>>>> d51adbabb9f1929c9380e93b0d6ae280b5d6a867
 	<!-- /Datos del usuario -->
 
 	<!-- Mis productos -->
