@@ -7,8 +7,9 @@ const perfilController = {
                 {usuarios_id:req.session.user.id}
             ],
             include: [{
-                association:'usuario'
-            }]
+                association:'usuario',
+                association:'comentarios'
+             }]
         })
         .then(data =>{
             //return res.send( data);

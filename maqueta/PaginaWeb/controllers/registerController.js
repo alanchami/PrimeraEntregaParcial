@@ -69,7 +69,7 @@ const registerController = {
           
                             
            
-                            return res.redirect('/')
+                            return res.redirect('/login')
          
                         })
     

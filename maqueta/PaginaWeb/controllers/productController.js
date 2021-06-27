@@ -65,7 +65,7 @@ const productController = {
             ]
         })
         .then( data =>{
-        //eturn res.send(data);
+        //return res.send(data);
             return res.render ('search-results', { title: 'Proyecto Integrador 2021', relojes : data})
           
         })

@@ -37,17 +37,18 @@
 				</div>
 				
 				<div>
+					<% for(let i=0; i<productos.length; i++) {%>
 					<ul class="">
-						<li> <%= productos.length %></li>
+						<li> Productos: <%= productos.length %></li>
 						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<li>Comentarios: <%= productos.comentarios %></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		
 	</section>
-
+	<% } %>
 	<!-- /Datos del usuario -->
 
 	<!-- Mis productos -->
