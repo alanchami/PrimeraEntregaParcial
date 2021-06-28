@@ -30,7 +30,6 @@ const registerController = {
         } else {
             users.findOne({
                 where: [{email: req.body.email}]
-
             })
                 .then(function(user){
                     
