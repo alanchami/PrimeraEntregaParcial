@@ -15,16 +15,18 @@ const registerController = {
     },
     //metodo store lo uso para guardar la informacion en la base de datos
     store: function(req, res){ 
-        let errors ={};
+        db.Usuario.findAll({
+            })
+        let errors = {}
         
         if(req.body.email == ""){
-            errors.message ="el mail es obligatorio";
+            errors.message = "el mail es obligatorio";
             res.locals.errors = errors;
-            return res.render('register',{title:'Proyecto Integrador'})   
+            return res.redirect('/register')   
         } else if(req.body.password == ""){
-            errors.message ="la contraseña es obligatorio";
+            errors.message = "la contraseña es obligatoria";
             res.locals.errors = errors;
-            return res.render('register',{title:'Proyecto Integrador'});
+            return res.redirect ('/register');
         } else {
             users.findOne({
                 where: [{email: req.body.email}]
@@ -63,7 +65,7 @@ const registerController = {
                         .then( user => { 
                             return res.redirect('/login')
                         })
-                        
+
                         .catch(error => {
            
                             console.log(error)
